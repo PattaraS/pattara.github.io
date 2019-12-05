@@ -4,8 +4,15 @@ title: Pat - publications
 ---
 <div class="left">
     <ul class="papers">
-	  {% for paper in sites.data.papers %}
-        <li class="paper"> {{ paper.name }} </li>
+
+	  {% for paper in site.data.papers %}
+        <li class="paper">
+            <span class="p-authors"> {{ paper.authors }} </span>
+            <span class="p-name"> {{ paper.name }} </span>
+            {% for place in paper.places %}
+                <a class="p-link" href="{{ place.link }}"> [{{ place.name }}] </a>
+            {% endfor %}
+        </li>
 	  {% endfor %}
     </ul>
 </div><!-- /.blurb -->
