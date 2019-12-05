@@ -49,3 +49,19 @@ ul.posts li {
 .center {
    text-align: center;
 }
+
+ul.papers li.paper {
+    list-style: none;
+}
+
+span.p-authors {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
+}
+span.p-name {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
+    font-weight: bold;
+}
