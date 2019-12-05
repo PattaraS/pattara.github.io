@@ -4,14 +4,15 @@ title: Pat - publications
 ---
 <div class="left">
     <ul class="papers">
+
+	  {% for paper in site.papers %}
         <li class="paper">
-            <span class="p-authors">
-            P. Chalermsook, S. Khuller, P. Sukprasert, S. Uniyal
-            </span>
-            <span class="p-name">
-            Multi-transversals for Triangles and the Tuza Conjecture
-            </span>
-                <a class="p-link" href="https://www.siam.org/conferences/cm/program/accepted-papers/soda20-accepted-papers">[to appear in SODA 2020]</a>
+            <span class="p-authors"> {{ paper.authors }} </span>
+            <span class="p-name"> {{ paper.name }} </span>
+            {% for place in paper.places %}
+                <a class="p-link" href="{{ place.link }}"> [{{ place.name }}] </a>
+            {% endfor %}
         </li>
+	  {% endfor %}
     </ul>
 </div><!-- /.blurb -->
