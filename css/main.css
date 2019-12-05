@@ -65,3 +65,9 @@ span.p-name {
     color: #333;
     font-weight: bold;
 }
+
+a.p-link {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    color: #999;
+}
